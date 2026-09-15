@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background: #0f1117;
+    color: #f3f4f6;
+
+    font-family: Arial, sans-serif;
+}
+
+.analyzer {
+    width: min(1400px, 90%);
+    margin: 50px auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.editor,
+.result {
+    background: #1a1d26;
+    border: 1px solid #2a2e3a;
+    border-radius: 12px;
+    padding: 20px;
+
+    min-height: 600px;
+}
+
+h2 {
+    margin: 0 0 16px;
+
+    font-size: 18px;
+    font-weight: 500;
+}
+
+textarea {
+    width: 100%;
+    height: 500px;
+
+    resize: none;
+
+    padding: 16px;
+
+    background: #0f1117;
+    color: #f3f4f6;
+
+    border: 1px solid #2a2e3a;
+    border-radius: 8px;
+
+    outline: none;
+
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 15px;
+    line-height: 1.6;
+
+    tab-size: 4;
+}
+
+textarea:focus {
+    border-color: #22c55e;
+}
+
+textarea::placeholder {
+    color: #6b7280;
+}
+
+.buttons {
+    display: flex;
+    margin-top: 16px;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+button {
+    padding: 10px 18px;
+
+    border: none;
+    border-radius: 8px;
+
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+#analyzeButton {
+    background: #22c55e;
+    color: #0f1117;
+}
+#analyzeButton:hover {
+    background: #16a34a;
+}
+
+#randCodeButton {
+    background: #374151;
+    color: white;
+}
+
+#randCodeButton:hover {
+    background: #4B5563;
+}
+
+
+#resultOutput {
+    height: 500px;
+
+    overflow-y: auto;
+
+    background: #0f1117;
+    border: 1px solid #2a2e3a;
+    border-radius: 8px;
+
+    padding: 16px;
+
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 14px;
+}
