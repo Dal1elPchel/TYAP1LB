@@ -66,8 +66,14 @@ function recognizeLexeme(lexeme) {
     }
 
     if (/^[A-Za-z][A-Za-z0-9_]*$/.test(lexeme)) {
-        identifiers.add(lexeme);
+        if (lexeme.length > 11) {
+            return {
+                type: 'ОШИБКА: ДЛИНА ИДЕНТИФИКАТОРА БОЛЬШЕ 11',
+                value: lexeme,
+            };
+        }
 
+        identifiers.add(lexeme);
         return {
             type: 'ИДЕНТИФИКАТОР',
             value: lexeme,
